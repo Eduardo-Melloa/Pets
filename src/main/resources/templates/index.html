@@ -14,7 +14,7 @@
 
         <div th:if="${listaClientes != null}">
             <div th:each="cliente : ${listaClientes}">
-                <a th:href="${cliente.nome}" th:text="${cliente.nome}"></a>
+                <a th:text="${cliente.nome}"></a>
             </div>
         </div>
         

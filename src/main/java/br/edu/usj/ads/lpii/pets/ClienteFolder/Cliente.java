@@ -1,4 +1,4 @@
-package br.edu.usj.ads.lpii.pets;
+package br.edu.usj.ads.lpii.pets.ClienteFolder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

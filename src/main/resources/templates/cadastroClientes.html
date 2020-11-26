@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Clientes</h1>
+            <form method="POST" action="/adicionar">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" name="nome" id="nome" th:value="${cliente.nome}"/> 
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" class="form-control" name="telefone" id="telefone" th:value="${cliente.telefone}"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF *obrigatório*:</label>
+                    <input type="text" class="form-control" name="cpf" id="cpf" th:value="${cliente.cpf}"/>
+                </div>
+
+            </form>
+        
+        <a class="btn btn-danger" href="/">Voltar</a>
+    </div>
+    <script src="/js/jquery-3.5.1.slim.min.js" ></script>
+    <script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

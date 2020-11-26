@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title> Clientes </title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Pets</h1>
+        
+        <a class="btn btn-primary " href="/cadastroClientes" >Novo Cliente</a>
+
+        <div th:if="${listaClientes != null}">
+            <div th:each="cliente : ${listaClientes}">
+                <a th:href="${cliente.nome}" th:text="${cliente.nome}"></a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="/js/jquery-3.5.1.slim.min.js" ></script>
+    <script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

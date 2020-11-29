@@ -1,4 +1,4 @@
-package br.edu.usj.ads.lpii.pets.ClienteFolder;
+package br.edu.usj.ads.lpii.pets.cliente;
 
 import java.util.List;
 

@@ -1,4 +1,5 @@
-Agenda de PETS
+## Agenda de PETS
 
--Matheus Alves 
--Eduardo Alves
+Dupla:
+- Matheus Alves 
+- Eduardo Alves

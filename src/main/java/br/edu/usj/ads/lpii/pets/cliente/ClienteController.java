@@ -12,6 +12,9 @@ import br.edu.usj.ads.lpii.pets.pets.Pet;
 import br.edu.usj.ads.lpii.pets.pets.PetRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
 
 
 
@@ -98,6 +101,23 @@ public class ClienteController {
 
         return "redirect:/";
     }
+
+    @GetMapping(value="/pesquisaCliente")
+    public String getPesquisaCliente() {
+        return "pesquisaCliente";
+    }
+    
+    @PostMapping(value="/pesquisaCliente")
+    public ModelAndView postPesquisaClientePorNome(@RequestParam String nome) {
+        
+        List<Cliente> listaClientes = clienteRepository.findByNomeContainingIgnoreCaseOrderByNome(nome);
+        ModelAndView mAv= new ModelAndView("pesquisaCliente");
+        mAv.addObject("listaClientes", listaClientes);
+        mAv.addObject("nome", nome);
+                
+        return mAv;
+    }
+    
     
 
 }
